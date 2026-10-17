@@ -25,7 +25,7 @@ type Width = (typeof WIDTHS)[number]
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || undefined}>
       <StoreProvider>
         <Routes>
           <Route path="/design-system" element={<DesignSystem />} />
